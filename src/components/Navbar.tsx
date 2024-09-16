@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BurgerMenuComp from "./BurgerMenuComp";
 import hambuergIcon from "/icons/menu.png";
 import NavbarLinkItem from "./NavbarLinkItem";
@@ -9,8 +9,15 @@ const Navbar = () => {
 
   const handleMenu = () => {
     setMenuOpen(!isMenuOpen);
-    console.log(isMenuOpen);
   };
+
+  useEffect(()=>{
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden"; // Disable scroll
+    } else {
+      document.body.style.overflow = ""; // Reset overflow to default when menu closes
+    }
+  },[isMenuOpen])
 
   return (
     <nav className="h-[60px] md:h-[89px] w-full bg-[#f8f9fa] fixed left-0 top-0 z-[999]">
