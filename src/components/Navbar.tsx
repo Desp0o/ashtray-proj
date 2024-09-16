@@ -1,6 +1,30 @@
 import { useState } from "react";
 import BurgerMenuComp from "./BurgerMenuComp";
 import hambuergIcon from "/icons/menu.png";
+import NavbarLinkItem from "./NavbarLinkItem";
+
+const menuArray = [
+  {
+    name: "მთავარი",
+    navFont: "14px",
+    burgerFont: "28px",
+  },
+  {
+    name: "პროდუქტი",
+    navFont: "14px",
+    burgerFont: "28px",
+  },
+  {
+    name: "ჩვენს შესახებ",
+    navFont: "14px",
+    burgerFont: "28px",
+  },
+  {
+    name: "კონტაქტი",
+    navFont: "14px",
+    burgerFont: "28px",
+  },
+];
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -13,12 +37,17 @@ const Navbar = () => {
     <nav className="h-[89px] w-full bg-white px-[40px] fixed left-0 top-0 z-[999] flex items-center justify-between">
       <p className="text-[40px] font-[900]">Ashtray</p>
 
-      <ul className="hidden md:flex items-center gap-[40px] text-[14px] text-[#717171] font-[600]">
-        <li>მთავარი</li>
-        <li>პროდუქტი</li>
-        <li>ჩვენს შესახებ</li>
-        <li>კონტაქტი</li>
-      </ul>
+      <div className="hidden md:flex items-center gap-[40px] text-[#717171] font-[600]">
+        {menuArray.map((item, index) => {
+          return (
+            <NavbarLinkItem
+              key={index}
+              name={item.name}
+              fontSize={item.navFont}
+            />
+          );
+        })}
+      </div>
 
       <img
         src={hambuergIcon}
@@ -38,7 +67,7 @@ const Navbar = () => {
           }`}
           onClick={handleMenu}
         />
-        <BurgerMenuComp funcName={handleMenu} />
+        <BurgerMenuComp funcName={handleMenu} array={menuArray} />
       </div>
     </nav>
   );
