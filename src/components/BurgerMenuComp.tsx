@@ -4,7 +4,13 @@ import NavbarLinkItem from "./NavbarLinkItem";
 
 interface BurgerMenuCompProps {
   funcName: () => void;
-  array: { name: string; navFont: string; burgerFont: string, fontWeightBurger:number }[];
+  array: {
+    name: string;
+    navFont: string;
+    burgerFont: string;
+    fontWeightBurger: number;
+    sectionId: string;
+  }[];
 }
 
 const BurgerMenuComp: React.FC<BurgerMenuCompProps> = ({ funcName, array }) => {
@@ -26,6 +32,8 @@ const BurgerMenuComp: React.FC<BurgerMenuCompProps> = ({ funcName, array }) => {
               fontWeight={item.fontWeightBurger}
               name={item.name}
               fontSize={item.burgerFont}
+              sectionId={item.sectionId}
+              funcName={funcName}
             />
           );
         })}

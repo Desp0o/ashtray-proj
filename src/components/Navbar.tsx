@@ -11,13 +11,13 @@ const Navbar = () => {
     setMenuOpen(!isMenuOpen);
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden"; // Disable scroll
     } else {
       document.body.style.overflow = ""; // Reset overflow to default when menu closes
     }
-  },[isMenuOpen])
+  }, [isMenuOpen]);
 
   return (
     <nav className="h-[60px] md:h-[89px] w-full bg-[#f8f9fa] fixed left-0 top-0 z-[999]">
@@ -32,6 +32,7 @@ const Navbar = () => {
                 fontWeight={item.fontWeight}
                 name={item.name}
                 fontSize={item.navFont}
+                sectionId={item.sectionId}
               />
             );
           })}
@@ -44,6 +45,7 @@ const Navbar = () => {
         className="w-[32px] scale-x-[-1] cursor-pointer md:hidden absolute top-1/2 -translate-y-1/2 right-[20px]"
       />
 
+      {/* burger menu panel */}
       <div
         className={`fixed top-0 w-[500px] max-w-full md:hidden transition-all ease-in duration-200 ${
           isMenuOpen ? "right-0" : "-right-full"

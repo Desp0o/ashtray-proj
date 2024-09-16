@@ -5,6 +5,7 @@ export const menuArray = [
       burgerFont: "28px",
       fontWeight: 400,
       fontWeightBurger:400,
+      sectionId: "home"
     },
     {
       name: "პროდუქტი",
@@ -12,6 +13,7 @@ export const menuArray = [
       burgerFont: "28px",
       fontWeight: 400,
       fontWeightBurger:400,
+      sectionId: "product"
     },
     {
       name: "ჩვენს შესახებ",
@@ -19,6 +21,7 @@ export const menuArray = [
       burgerFont: "28px",
       fontWeight: 400,
       fontWeightBurger:400,
+      sectionId: "aboutUs"
     },
     {
       name: "კონტაქტი",
@@ -26,5 +29,6 @@ export const menuArray = [
       burgerFont: "28px",
       fontWeight: 400,
       fontWeightBurger:400,
+      sectionId: "contact"
     },
   ];

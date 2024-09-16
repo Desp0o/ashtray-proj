@@ -7,6 +7,7 @@ import Slider from "../components/Slider";
 const Main = () => {
   return (
     <main className="pb-[60px] relative">
+      <div id="home" />
       <Slider />
 
       <div className="mt-[96px]" />

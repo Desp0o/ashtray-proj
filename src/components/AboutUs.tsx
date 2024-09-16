@@ -1,7 +1,7 @@
 
 const AboutUs = () => {
   return (
-    <section className="px-[20px] md:px-[50px] max-w-[1440px] mx-auto">
+    <section id="aboutUs" className="px-[20px] md:px-[50px] max-w-[1440px] mx-auto">
         <h2 className="text-[26px] ssm:text-[30px] uppercase text-center">
         About Us
       </h2>

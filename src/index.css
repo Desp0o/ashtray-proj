@@ -18,6 +18,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html{
+  scroll-padding-top: 90px !important;
+}
+
 body {
   width: 100%;
   min-height: 100vh;

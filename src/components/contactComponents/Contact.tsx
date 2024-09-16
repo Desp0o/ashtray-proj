@@ -3,7 +3,7 @@ import SocialBlock from "./SocialBlock";
 
 const Contact = () => {
   return (
-    <footer className="max-w-[1440px] mx-auto px-[20px] md:px-[50px] flex justify-between">
+    <footer id="contact" className="max-w-[1440px] mx-auto px-[20px] md:px-[50px] flex justify-between">
       {/* footer title */}
       <div className="w-[300px] hidden md:block">
         <p className="text-[14px] md:text-[20px] font-[900] uppercase">Ashtray</p>
