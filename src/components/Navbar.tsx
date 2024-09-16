@@ -13,9 +13,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="h-[89px] w-full bg-white fixed left-0 top-0 z-[999]">
+    <nav className="h-[60px] md:h-[89px] w-full bg-[#f8f9fa] fixed left-0 top-0 z-[999]">
       <div className="max-w-[1440px] mx-auto h-full flex items-center justify-between px-[20px] md:px-[50px]">
-        <p className="text-[40px] font-[900]">Ashtray</p>
+        <p className="text-[30px] md:text-[40px] font-[900]">Ashtray</p>
 
         <div className="hidden md:flex items-center gap-[40px] text-[#717171] font-[600]">
           {menuArray.map((item, index) => {
