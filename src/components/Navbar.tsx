@@ -34,7 +34,7 @@ const Navbar = () => {
         src={hambuergIcon}
         alt="menu"
         onClick={handleMenu}
-        className="w-[32px] scale-x-[-1] cursor-pointer md:hidden"
+        className="w-[32px] scale-x-[-1] cursor-pointer md:hidden absolute top-1/2 -translate-y-1/2 right-[20px]"
       />
 
       <div

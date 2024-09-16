@@ -22,4 +22,12 @@ body {
   width: 100%;
   min-height: 100vh;
   font-family: "Lato";
+  color: #212529;
+}
+
+.social-item:hover .social_icon{
+  cursor: pointer;
+  transition: all 0.2s ease;
+  fill: #72AEC8;
+  stroke: #72AEC8;
 }

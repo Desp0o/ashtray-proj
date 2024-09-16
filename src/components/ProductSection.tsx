@@ -46,7 +46,6 @@ const ProductSection = () => {
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-start gap-[20px]">
                   <img
-                    loading="lazy"
                     src={item.image}
                     className="w-[300px] h-[300px]"
                     alt="ashtray img"
