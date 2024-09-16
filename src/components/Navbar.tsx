@@ -1,11 +1,47 @@
+import { useState } from "react";
+import BurgerMenuComp from "./BurgerMenuComp";
+import hambuergIcon from "/icons/menu.png";
 
 const Navbar = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const handleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav className='h-[89px] w-full bg-red-600 px-[40px] fixed left-0 top-0'>
+    <nav className="h-[89px] w-full bg-white px-[40px] fixed left-0 top-0 z-[999] flex items-center justify-between">
+      <p className="text-[40px] font-[900]">Ashtray</p>
 
+      <ul className="hidden md:flex items-center gap-[40px] text-[14px] text-[#717171] font-[600]">
+        <li>მთავარი</li>
+        <li>პროდუქტი</li>
+        <li>ჩვენს შესახებ</li>
+        <li>კონტაქტი</li>
+      </ul>
 
+      <img
+        src={hambuergIcon}
+        alt="menu"
+        onClick={handleMenu}
+        className="w-[32px] scale-x-[-1] cursor-pointer md:hidden"
+      />
+
+      <div
+        className={`fixed top-0 w-[500px] max-w-full right-0 md:hidden transition-all ease-in duration-200 ${
+          isMenuOpen ? "right-0" : "-right-full"
+        }`}
+      >
+        <div
+          className={`w-full h-full bg-[#00000050] fixed top-0 left-0 ${
+            isMenuOpen ? "block" : "hidden"
+          }`}
+          onClick={handleMenu}
+        />
+        <BurgerMenuComp funcName={handleMenu} />
+      </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
