@@ -1,0 +1,13 @@
+  
+  .mySwiper2{
+    height: fit-content !important;
+    padding-bottom: 50px;
+  }
+  
+  .mySwiper2.swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+  
