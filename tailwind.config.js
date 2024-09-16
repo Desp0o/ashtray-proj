@@ -15,6 +15,7 @@ export default {
         secondary: "Jost"
       },
       screens: {
+        'ssm': "400px",
         '1xl': '1400px',
       },
     },

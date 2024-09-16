@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="h-[89px] w-full bg-white px-[50px] fixed left-0 top-0 z-[999] flex items-center justify-between">
+    <nav className="h-[89px] w-full bg-white px-[20px] md:px-[50px] fixed left-0 top-0 z-[999] flex items-center justify-between">
       <p className="text-[40px] font-[900]">Ashtray</p>
 
       <div className="hidden md:flex items-center gap-[40px] text-[#717171] font-[600]">

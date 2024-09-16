@@ -12,8 +12,10 @@ import { ashArray } from "../lib/ashtrayArray";
 
 const ProductSection = () => {
   return (
-    <section className="px-[50px] flex flex-col gap-[20px]">
-      <h2 className="text-[30px] uppercase text-center">Mobile Products</h2>
+    <section className="px-[20px] md:px-[50px] flex flex-col gap-[10px]">
+      <h2 className="text-[26px] ssm:text-[30px] uppercase text-center">
+        Mobile Products
+      </h2>
 
       <div>
         <Swiper
@@ -39,19 +41,21 @@ const ProductSection = () => {
           modules={[Pagination]}
           className="mySwiper2"
         >
-          {
-            ashArray.map((item, index)=>{
-                return(
-                    <SwiperSlide key={index}>
-            <div className="flex flex-col items-start">
-                <img src={item.image} className="w-[300px] h-[300px]"/>
-                <h3 className="text-[20px] capitalize">{item.title}</h3>
-            </div>
-          </SwiperSlide>
-                )
-            })
-          }
-
+          {ashArray.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className="flex flex-col items-start gap-[20px]">
+                  <img
+                    loading="lazy"
+                    src={item.image}
+                    className="w-[300px] h-[300px]"
+                    alt="ashtray img"
+                  />
+                  <h3 className="text-[20px] capitalize">{item.title}</h3>
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </section>

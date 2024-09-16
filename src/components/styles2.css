@@ -11,3 +11,11 @@
     height: 100%;
   }
   
+  .swiper-pagination-bullet{
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+ .swiper-pagination-bullet-active{
+  background-color: #4a4a4a;
+ }
