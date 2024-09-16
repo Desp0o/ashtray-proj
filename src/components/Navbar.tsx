@@ -10,26 +10,26 @@ const Navbar = () => {
   const handleMenu = () => {
     setMenuOpen(!isMenuOpen);
     console.log(isMenuOpen);
-    
   };
 
   return (
-    <nav className="h-[89px] w-full bg-white px-[20px] md:px-[50px] fixed left-0 top-0 z-[999] flex items-center justify-between">
-      <p className="text-[40px] font-[900]">Ashtray</p>
+    <nav className="h-[89px] w-full bg-white fixed left-0 top-0 z-[999]">
+      <div className="max-w-[1440px] mx-auto h-full flex items-center justify-between px-[20px] md:px-[50px]">
+        <p className="text-[40px] font-[900]">Ashtray</p>
 
-      <div className="hidden md:flex items-center gap-[40px] text-[#717171] font-[600]">
-        {menuArray.map((item, index) => {
-          return (
-            <NavbarLinkItem
-              key={index}
-              fontWeight={item.fontWeight}
-              name={item.name}
-              fontSize={item.navFont}
-            />
-          );
-        })}
+        <div className="hidden md:flex items-center gap-[40px] text-[#717171] font-[600]">
+          {menuArray.map((item, index) => {
+            return (
+              <NavbarLinkItem
+                key={index}
+                fontWeight={item.fontWeight}
+                name={item.name}
+                fontSize={item.navFont}
+              />
+            );
+          })}
+        </div>
       </div>
-
       <img
         src={hambuergIcon}
         alt="menu"
@@ -50,8 +50,6 @@ const Navbar = () => {
         />
         <BurgerMenuComp funcName={handleMenu} array={menuArray} />
       </div>
-
-      
     </nav>
   );
 };
