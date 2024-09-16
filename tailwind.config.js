@@ -13,7 +13,10 @@ export default {
       },
       fontFamily:{
         secondary: "Jost"
-      }
+      },
+      screens: {
+        '1xl': '1400px',
+      },
     },
   },
   plugins: [],

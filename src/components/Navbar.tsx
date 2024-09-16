@@ -8,21 +8,29 @@ const menuArray = [
     name: "მთავარი",
     navFont: "14px",
     burgerFont: "28px",
+    fontWeight: 600,
+    fontWeightBurger:400,
   },
   {
     name: "პროდუქტი",
     navFont: "14px",
     burgerFont: "28px",
+    fontWeight: 600,
+    fontWeightBurger:400,
   },
   {
     name: "ჩვენს შესახებ",
     navFont: "14px",
     burgerFont: "28px",
+    fontWeight: 600,
+    fontWeightBurger:400,
   },
   {
     name: "კონტაქტი",
     navFont: "14px",
     burgerFont: "28px",
+    fontWeight: 600,
+    fontWeightBurger:400,
   },
 ];
 
@@ -31,6 +39,8 @@ const Navbar = () => {
 
   const handleMenu = () => {
     setMenuOpen(!isMenuOpen);
+    console.log(isMenuOpen);
+    
   };
 
   return (
@@ -42,6 +52,7 @@ const Navbar = () => {
           return (
             <NavbarLinkItem
               key={index}
+              fontWeight={item.fontWeight}
               name={item.name}
               fontSize={item.navFont}
             />
@@ -57,7 +68,7 @@ const Navbar = () => {
       />
 
       <div
-        className={`fixed top-0 w-[500px] max-w-full right-0 md:hidden transition-all ease-in duration-200 ${
+        className={`fixed top-0 w-[500px] max-w-full md:hidden transition-all ease-in duration-200 ${
           isMenuOpen ? "right-0" : "-right-full"
         }`}
       >
@@ -69,6 +80,8 @@ const Navbar = () => {
         />
         <BurgerMenuComp funcName={handleMenu} array={menuArray} />
       </div>
+
+      
     </nav>
   );
 };

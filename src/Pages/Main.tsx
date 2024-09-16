@@ -1,10 +1,14 @@
+import SecondSection from '../components/SecondSection'
 import Slider from '../components/Slider'
 
 const Main = () => {
   return (
-    <div>
+    <main className='pb-[100px]'>
         <Slider />
-    </div>
+
+      <div className='mt-[96px]'></div>
+        <SecondSection />
+    </main>
   )
 }
 

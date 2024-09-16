@@ -4,7 +4,7 @@ import NavbarLinkItem from "./NavbarLinkItem";
 
 interface BurgerMenuCompProps {
   funcName: () => void;
-  array: { name: string; navFont: string; burgerFont: string }[];
+  array: { name: string; navFont: string; burgerFont: string, fontWeightBurger:number }[];
 }
 
 const BurgerMenuComp: React.FC<BurgerMenuCompProps> = ({ funcName, array }) => {
@@ -12,7 +12,7 @@ const BurgerMenuComp: React.FC<BurgerMenuCompProps> = ({ funcName, array }) => {
     <div className="bg-[#EDF1F3] relative max-w-full w-[500px] h-screen z-[999] flex flex-col gap-[50px] py-[30px] px-[40px]">
       <img
         src={closeIcon}
-        className="top-[40px] right-[22px] absolute w-[16px]"
+        className="top-[40px] right-[22px] absolute w-[16px] cursor-pointer"
         onClick={funcName}
       />
 
@@ -23,6 +23,7 @@ const BurgerMenuComp: React.FC<BurgerMenuCompProps> = ({ funcName, array }) => {
           return (
             <NavbarLinkItem
               key={index}
+              fontWeight={item.fontWeightBurger}
               name={item.name}
               fontSize={item.burgerFont}
             />
