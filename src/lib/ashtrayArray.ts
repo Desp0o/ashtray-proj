@@ -1,7 +1,5 @@
-import { useTranslation } from "react-i18next";
 
 const AshtrayArray = () => {
-  const { t } = useTranslation();
 
   const ashArray = [
     {
