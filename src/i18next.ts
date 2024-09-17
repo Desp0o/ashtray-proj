@@ -7,43 +7,44 @@ i18next
   .use(initReactI18next)
   .init({
     debug: false,
-    fallbackLng: "en",
+    fallbackLng: "ge",
+    lng: "ge",  
     returnObjects: true,
     resources: {
-      en: {
-        translation: {
-          navbar:{
-            main:"Main",
-            product:"Product",
-            aboutUs:"About Us",
-            contact:"Contact"
-          },
-          titles:{
-            products:"products",
-            howToUse:"how to use",
-            aboutUs: "about us",
-            social: "socials",
-            quickLinks: "quick links",
-            contactUs:"contact us"
-          }
-        },
-      },
       ge: {
         translation: {
-          navbar:{
-            main:"მთავარი",
-            product:"პროდუქტი",
-            aboutUs:"ჩვენს შესახებ",
-            contact:"კონტაქტი"
+          navbar: {
+            main: "მთავარი",
+            product: "პროდუქტი",
+            aboutUs: "ჩვენს შესახებ",
+            contact: "კონტაქტი",
           },
-          titles:{
-            products:"პროდუქტი",
-            howToUse:"როგორ გამოვიყენოთ",
+          titles: {
+            products: "პროდუქტი",
+            howToUse: "როგორ გამოვიყენოთ",
             aboutUs: "ჩვენს შესახებ",
             social: "ქსელები",
             quickLinks: "ლინკები",
-            contactUs:"კონტაქტი"
-          }
+            contactUs: "კონტაქტი",
+          },
+        },
+      },
+      en: {
+        translation: {
+          navbar: {
+            main: "Main",
+            product: "Product",
+            aboutUs: "About Us",
+            contact: "Contact",
+          },
+          titles: {
+            products: "products",
+            howToUse: "how to use",
+            aboutUs: "about us",
+            social: "socials",
+            quickLinks: "quick links",
+            contactUs: "contact us",
+          },
         },
       },
     },
