@@ -1,3 +1,5 @@
+import { howToUseArray } from '../lib/howToUse'
+import TitleComp from './TitleComp'
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -5,17 +7,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import "./styles2.css";
+import { Pagination } from 'swiper/modules';
 
-// import required modules
-import { Pagination } from "swiper/modules";
-import { ashArray } from "../lib/ashtrayArray";
-import TitleComp from "./TitleComp";
-
-const ProductSection = () => {
+const HowToUse = () => {
   return (
-    <section id="product" className="px-[20px] md:px-[50px] flex flex-col gap-[10px] max-w-[1440px] mx-auto">
-    <TitleComp title="Products" />
-      <div>
+    <div className='flex flex-col gap-[50px] px-[20px] md:px-[50px] max-w-[1440px] mx-auto'>
+        <TitleComp title="How To use" />
+
+        <div className='flex justify-between'>
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -37,26 +36,25 @@ const ProductSection = () => {
             },
           }}
           modules={[Pagination]}
-          className="mySwiper2"
+          className="mySwiper2 mySwiper3"
         >
-          {ashArray.map((item, index) => {
+          {howToUseArray.map((item, index) => {
             return (
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-start gap-[20px]">
                   <img
-                    src={item.image}
+                    src={item.img}
                     className="w-[300px] h-[300px]"
                     alt="ashtray img"
                   />
-                  <h3 className="text-[20px] capitalize">{item.title}</h3>
                 </div>
               </SwiperSlide>
             );
           })}
         </Swiper>
-      </div>
-    </section>
-  );
-};
+        </div>
+    </div>
+  )
+}
 
-export default ProductSection;
+export default HowToUse

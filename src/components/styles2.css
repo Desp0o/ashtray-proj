@@ -19,3 +19,7 @@
  .swiper-pagination-bullet-active{
   background-color: #4a4a4a;
  }
+
+ .mySwiper3 .swiper-pagination-bullet-active{
+  background-color: #72AEC8;
+ }

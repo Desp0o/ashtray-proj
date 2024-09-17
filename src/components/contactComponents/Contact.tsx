@@ -2,7 +2,6 @@ import { menuArray } from "../../lib/menuArray";
 import SocialBlock from "./SocialBlock";
 
 const Contact = () => {
-
   const handleClick = (event: React.MouseEvent, sectionId: string) => {
     event.preventDefault();
 
@@ -40,7 +39,7 @@ const Contact = () => {
           {menuArray.map((item, index) => {
             return (
               <p
-                onClick={(e)=>handleClick(e, item.sectionId)}
+                onClick={(e) => handleClick(e, item.sectionId)}
                 className="text-[#AEAEAE] text-[12px] md:text-[14px] cursor-pointer hover:text-activeColor transition-all"
                 key={index}
               >

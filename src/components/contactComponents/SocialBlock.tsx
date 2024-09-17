@@ -15,9 +15,9 @@ const SocialBlock = () => {
               className="flex items-center gap-[10px] group social-item"
             >
               {item.icon}
-              <h4 className="text-[12px] md:text-[14px] text-[#AEAEAE] group-hover:text-activeColor cursor-pointer">
+              <p className="text-[12px] md:text-[14px] text-[#AEAEAE] group-hover:text-activeColor cursor-pointer">
                 {item.name}
-              </h4>
+              </p>
             </a>
           );
         })}

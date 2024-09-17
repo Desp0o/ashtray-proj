@@ -1,5 +1,6 @@
 import AboutUs from "../components/AboutUs";
 import Contact from "../components/contactComponents/Contact";
+import HowToUse from "../components/HowToUse";
 import ProductSection from "../components/ProductSection";
 import SecondSection from "../components/SecondSection";
 import Slider from "../components/Slider";
@@ -15,6 +16,9 @@ const Main = () => {
 
       <div className="mt-[96px]" />
       <ProductSection />
+
+      <div className="mt-[96px]" />
+      <HowToUse />
 
       <div className="mt-[96px]" />
       <AboutUs />
