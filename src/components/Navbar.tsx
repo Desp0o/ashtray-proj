@@ -3,6 +3,7 @@ import BurgerMenuComp from "./BurgerMenuComp";
 import hambuergIcon from "/icons/menu.png";
 import NavbarLinkItem from "./NavbarLinkItem";
 import { menuArray } from "../lib/menuArray";
+import LanguageSelector from "./LanguageSelector";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -38,12 +39,16 @@ const Navbar = () => {
           })}
         </div>
       </div>
+
+      <LanguageSelector />
       <img
         src={hambuergIcon}
         alt="menu"
         onClick={handleMenu}
         className="w-[32px] scale-x-[-1] cursor-pointer md:hidden absolute top-1/2 -translate-y-1/2 right-[20px]"
       />
+
+      
 
       {/* burger menu panel */}
       <div
