@@ -8,11 +8,14 @@ import "swiper/css/pagination";
 
 import "./styles2.css";
 import { Pagination } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 
 const HowToUse = () => {
+  const { t } = useTranslation();
+
   return (
     <div className='flex flex-col gap-[50px] px-[20px] md:px-[50px] max-w-[1440px] mx-auto'>
-        <TitleComp title="How To use" />
+        <TitleComp title={t("titles.howToUse")} />
 
         <div className='flex justify-between'>
         <Swiper

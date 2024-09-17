@@ -14,7 +14,7 @@ const LanguageSelector = () => {
   return (
     <p
       onClick={selectLanguage}
-      className="text-activeColor font-[600] absolute top-1/2 -translate-y-1/2 right-[50px]"
+      className="text-activeColor font-[600]"
     >
       {i18n.language === "ge" ? "EN" : "GE"}
     </p>

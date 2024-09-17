@@ -8,13 +8,21 @@ import "./styles2.css";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-import { ashArray } from "../lib/ashtrayArray";
+import AshtrayArray from "../lib/ashtrayArray";
 import TitleComp from "./TitleComp";
+import { useTranslation } from "react-i18next";
 
 const ProductSection = () => {
+  const { t } = useTranslation();
+
+  const ashArray = AshtrayArray();
+
   return (
-    <section id="product" className="px-[20px] md:px-[50px] flex flex-col gap-[10px] max-w-[1440px] mx-auto">
-    <TitleComp title="Products" />
+    <section
+      id="product"
+      className="px-[20px] md:px-[50px] flex flex-col gap-[10px] max-w-[1440px] mx-auto"
+    >
+      <TitleComp title={t("titles.products")} />
       <div>
         <Swiper
           slidesPerView={1}

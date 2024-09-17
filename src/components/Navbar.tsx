@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import BurgerMenuComp from "./BurgerMenuComp";
 import hambuergIcon from "/icons/menu.png";
 import NavbarLinkItem from "./NavbarLinkItem";
-import { menuArray } from "../lib/menuArray";
 import LanguageSelector from "./LanguageSelector";
+import MenuArray from "../lib/menuArray";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const menuListArray = MenuArray();
 
   const handleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -26,7 +27,7 @@ const Navbar = () => {
         <p className="text-[30px] md:text-[40px] font-[900]">Ashtray</p>
 
         <div className="hidden md:flex items-center gap-[40px] text-[#717171] font-[600]">
-          {menuArray.map((item, index) => {
+          {menuListArray.map((item, index) => {
             return (
               <NavbarLinkItem
                 key={index}
@@ -37,18 +38,16 @@ const Navbar = () => {
               />
             );
           })}
+          <LanguageSelector />
         </div>
       </div>
 
-      <LanguageSelector />
       <img
         src={hambuergIcon}
         alt="menu"
         onClick={handleMenu}
         className="w-[32px] scale-x-[-1] cursor-pointer md:hidden absolute top-1/2 -translate-y-1/2 right-[20px]"
       />
-
-      
 
       {/* burger menu panel */}
       <div
@@ -62,7 +61,7 @@ const Navbar = () => {
           }`}
           onClick={handleMenu}
         />
-        <BurgerMenuComp funcName={handleMenu} array={menuArray} />
+        <BurgerMenuComp funcName={handleMenu} array={menuListArray} />
       </div>
     </nav>
   );

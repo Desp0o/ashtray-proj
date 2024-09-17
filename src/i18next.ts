@@ -12,40 +12,38 @@ i18next
     resources: {
       en: {
         translation: {
-          myDay: "My Day",
-          importants: "Importants",
-          dashboard: "Dashboard",
-          addTask: "Add a task",
-          importnace: "Important",
-          complete: "Complete",
-          edit: "Edit",
-          delete: "Delete",
-          search: "Search",
-          inProgress:"In Progress",
-          taskByStatus:"Task by Status",
-          AllTasks:"All Tasks",
-          done:"Done",
-          stuck:"Stuck",
-          noData:"You have no data"
+          navbar:{
+            main:"Main",
+            product:"Product",
+            aboutUs:"About Us",
+            contact:"Contact"
+          },
+          titles:{
+            products:"products",
+            howToUse:"how to use",
+            aboutUs: "about us",
+            social: "socials",
+            quickLinks: "quick links",
+            contactUs:"contact us"
+          }
         },
       },
       ge: {
         translation: {
-          myDay: "მთავარი",
-          importants: "მნიშვნელოვანი",
-          dashboard: "დეშბორდი",
-          addTask: "დაამატე ტასკი",
-          importnace: "მნიშვნელოვანი",
-          complete: "დასრულება",
-          edit: "ჩასწორება",
-          delete: "წაშლა",
-          search: "ძებნა",
-          inProgress:"მიმდინარე",
-          taskByStatus:"ტასკები ჩარტი",
-          AllTasks:"ყველა ტასკი",
-          done:"დასრულებული",
-          stuck:"გაჭედილი",
-          noData:"ინფორმაცია არ არის"
+          navbar:{
+            main:"მთავარი",
+            product:"პროდუქტი",
+            aboutUs:"ჩვენს შესახებ",
+            contact:"კონტაქტი"
+          },
+          titles:{
+            products:"პროდუქტი",
+            howToUse:"როგორ გამოვიყენოთ",
+            aboutUs: "ჩვენს შესახებ",
+            social: "ქსელები",
+            quickLinks: "ლინკები",
+            contactUs:"კონტაქტი"
+          }
         },
       },
     },

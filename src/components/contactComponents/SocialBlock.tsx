@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { socialArray } from "../../lib/footerArrays";
 
 const SocialBlock = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col gap-[5px]">
-      <p className="text-[16px] md:text-[20px] font-[900] uppercase">Social</p>
+      <p className="text-[16px] md:text-[20px] font-[900] uppercase">{t("titles.social")}</p>
       <div className="flex flex-col gap-[10px]">
         {socialArray.map((item, index) => {
           return (

@@ -1,7 +1,11 @@
-import { menuArray } from "../../lib/menuArray";
 import SocialBlock from "./SocialBlock";
+import MenuArray from "../../lib/menuArray";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
+  const menuListArray = MenuArray()
   const handleClick = (event: React.MouseEvent, sectionId: string) => {
     event.preventDefault();
 
@@ -33,10 +37,10 @@ const Contact = () => {
       {/* quick links */}
       <div className="flex flex-col gap-[5px]">
         <p className="text-[14px] md:text-[20px] font-[900] uppercase">
-          quick links
+          {t("titles.quickLinks")}
         </p>
         <div className="flex flex-col gap-[10px]">
-          {menuArray.map((item, index) => {
+          {menuListArray.map((item, index) => {
             return (
               <p
                 onClick={(e) => handleClick(e, item.sectionId)}
@@ -53,7 +57,7 @@ const Contact = () => {
       {/* conatact */}
       <div className="flex flex-col gap-[5px]">
         <p className="text-[14px] md:text-[20px] font-[900] uppercase">
-          Contact us
+        {t("titles.contactUs")}
         </p>
         <div className="flex flex-col gap-[10px]">
           <p className="text-[#AEAEAE] text-[12px] md:text-[14px]">
