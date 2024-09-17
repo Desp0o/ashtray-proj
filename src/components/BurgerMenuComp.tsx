@@ -1,6 +1,7 @@
 import React from "react";
 import closeIcon from "/icons/close.png";
 import NavbarLinkItem from "./NavbarLinkItem";
+import LanguageSelector from "./LanguageSelector";
 
 interface BurgerMenuCompProps {
   funcName: () => void;
@@ -37,6 +38,7 @@ const BurgerMenuComp: React.FC<BurgerMenuCompProps> = ({ funcName, array }) => {
             />
           );
         })}
+        <LanguageSelector />
       </div>
     </div>
   );
